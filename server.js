@@ -1,6 +1,8 @@
 const express = require('express')
 const app = express()
 require('dotenv').config()
+const port = process.env.PORT || 3000
+const Cakes = require('./models/cakes.js')
 const mongoose = require('mongoose');
 const db = mongoose.connection;
 const dbupdateobject = {
@@ -25,6 +27,6 @@ app.get('/', (req, res) => {
 })
 
 
-app.listen(process.env.PORT, () => {
-  console.log(`listening on port ${process.env.PORT}`)
+app.listen(port, () => {
+  console.log(`listening on port ${port}`)
 })
