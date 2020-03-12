@@ -22,6 +22,14 @@ db.on('open', () => {
     console.log('Connection made!');
 });
 
+app.get('/cakes/:id', (req, res) => {
+  // Cakes.findById(req.params.id, (error, foundCakes) => {
+    res.render('show.ejs'
+    // , {cakes:foundCakes}
+  )
+  // })
+})
+
 app.get('/', (req, res) => {
   res.send('your application is working...')
 })
