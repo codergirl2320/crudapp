@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Index Page</h1>
+    <div class='container'>
+      <%  for (let i = 0; i < cakes.length; i++) {%>
+        <div class='cakes'>
+          <a href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img%>' alt='<%=cakes[i].name%>' style='max-width: 300px'></a>
+          <%=cakes[i].name%>
+        <%}%>
+      </div>
+    </div>
+  </body>
+</html>

@@ -26,6 +26,12 @@ app.get('/', (req, res) => {
   res.send('your application is working...')
 })
 
+app.get('/cakes', (req, res) => {
+  Cakes.find({}, (error, allCakes) => {
+    res.render('index.ejs', {cakes:allCakes})
+  })
+})
+
 
 app.listen(port, () => {
   console.log(`listening on port ${port}`)

@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const cakeSchema = new Schema ({
-  theme: {type: String, required:true},
+  name: {type: String, required:true},
   category: String,
   img: String,
   description: String,
