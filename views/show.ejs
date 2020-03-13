@@ -7,11 +7,19 @@
   <body>
     <h1><%=cakes.name%></h1>
       <div class='container'>
-        <img src="<%=cakes.img%>" alt="<%=cakes.name%>">
+        <img style='max-width: 300px' src="<%=cakes.img%>" alt="<%=cakes.name%>">
         <ul>
           <li><%=cakes.description%></li>
           <li><%=cakes.price%></li>
           <li><%=cakes.qty%></li>
+        </ul>
       </div>
+      <nav>
+        <a href="/cakes/<%=cakes._id%>/edit"><button>Edit</button></a>
+        <form action="/cakes/<%=cakes._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="delete" /><br/>
+        </form>
+      </nav>
+      <a href='/cakes'>Back to Cakes Index</a>
   </body>
 </html>

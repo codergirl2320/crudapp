@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+const methodOverride = require('method-override')
 require('dotenv').config()
 const port = process.env.PORT || 3000
 const Cakes = require('./models/cakes.js')
@@ -12,6 +13,7 @@ const dbupdateobject = {
 };
 
 app.use(express.urlencoded({extended:false}))
+app.use(methodOverride('_method'))
 
 
 app.get('/cakes/new', (req, res) => {
@@ -26,20 +28,38 @@ app.get('/cakes/:id', (req, res) => {
   })
 })
 
-app.get('/', (req, res) => {
-  res.send('your application is working...')
-})
+// app.get('/', (req, res) => {
+//   res.send('your application is working...')
+// })
 
-app.get('/cakes', (req, res) => {
+app.get('/cakes/', (req, res) => {
   Cakes.find({}, (error, allCakes) => {
     res.render('index.ejs', {cakes:allCakes})
   })
 })
 
-app.post('/cakes', (req, res) => {
+app.get('/cakes/:id/edit', (req, res) => {
+  Cakes.findById(req.params.id, (error, foundCakes) => {
+    res.render('edit.ejs', {cakes:foundCakes})
+  })
+})
+
+app.post('/cakes/', (req, res) => {
   Cakes.create(req.body, (error, createdCakes) => {
     // console.log(createdCakes)
     res.redirect('/cakes')
+  })
+})
+
+app.delete('/cakes/:id', (req, res) => {
+  Cakes.findByIdAndRemove(req.params.id, (err, data) => {
+    res.redirect('/cakes')
+  })
+})
+
+app.put('/cakes/:id', (req, res) => {
+  Cakes.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
+    res.redirect(`/cakes/${req.params.id}`)
   })
 })
 

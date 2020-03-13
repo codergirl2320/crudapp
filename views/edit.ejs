@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit Page</h1>
+    <div class='container'>
+      <form action="/cakes/<%=cakes._id%>?_method=PUT" method="POST">
+        Name: <input type="text" name="name" value="<%=cakes.name%>" /><br/>
+        Category: <input type="text" name="category" value="<%=cakes.category%>" /><br/>
+        Image: <input type="text" name="image" value="<%=cakes.img%>" /><br/>
+        Description: <input type="text" name="description" value="<%=cakes.description%>" /><br/>
+        Price: <input type="number" name="price" value="<%=cakes.price%>" /><br/>
+        Quantity: <input type="number" name="qty" value="<%=cakes.qty%>" /><br/>
+        <input type="submit" value="submit changes" />
+      </form>
+    </div>
+  </body>
+</html>
