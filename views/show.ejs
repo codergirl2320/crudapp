@@ -7,7 +7,13 @@
   <body>
     <h1><%=cakes.name%></h1>
       <div class='container'>
-        <img style='max-width: 300px' src="<%=cakes.img%>" alt="<%=cakes.name%>">
+
+        <% for (img of cakes.img) {%>
+          <img style='max-width: 300px' src="<%=img%>"></img>
+      <% } %>
+
+
+
         <ul>
           <li><%=cakes.description%></li>
           <li><%=cakes.price%></li>

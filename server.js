@@ -41,12 +41,26 @@ app.get('/cakes/:id/edit', (req, res) => {
   })
 })
 
+
+
+
+// app.post('/cakes/', (req, res) => {
+//   Cakes.create(req.body, (error, createdCakes) => {
+//     // console.log(createdCakes)
+//     res.redirect('/cakes')
+//   })
+// })
+
 app.post('/cakes/', (req, res) => {
+  req.body.img = req.body.img.split(',')
   Cakes.create(req.body, (error, createdCakes) => {
     // console.log(createdCakes)
     res.redirect('/cakes')
   })
 })
+
+
+
 
 app.delete('/cakes/:id', (req, res) => {
   Cakes.findByIdAndRemove(req.params.id, (err, data) => {

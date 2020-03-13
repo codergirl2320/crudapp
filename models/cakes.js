@@ -4,7 +4,7 @@ const Schema = mongoose.Schema
 const cakeSchema = new Schema ({
   name: {type: String, required:true},
   category: String,
-  img: String,
+  img: [String, String],
   description: String,
   price: {type: Number, min:0},
   qty: {type: Number, min:0}
