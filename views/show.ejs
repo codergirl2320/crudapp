@@ -5,9 +5,13 @@
     <title></title>
   </head>
   <body>
-    <h1>Show Page</h1>
+    <h1><%=cakes.name%></h1>
       <div class='container'>
-
+        <img src="<%=cakes.img%>" alt="<%=cakes.name%>">
+        <ul>
+          <li><%=cakes.description%></li>
+          <li><%=cakes.price%></li>
+          <li><%=cakes.qty%></li>
       </div>
   </body>
 </html>

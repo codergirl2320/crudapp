@@ -11,23 +11,19 @@ const dbupdateobject = {
     useFindAndModify: false
 };
 
-// Connect to Mongo
-mongoose.connect(process.env.DATABASE_URL, dbupdateobject);
+app.use(express.urlencoded({extended:false}))
 
-// Connection Error/Success
-db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
-db.on('connected', () => console.log('mongo connected: '));
-db.on('disconnected', () => console.log('mongo disconnected'));
-db.on('open', () => {
-    console.log('Connection made!');
-});
+
+app.get('/cakes/new', (req, res) => {
+  Cakes.create(req.body, (error, createdCakes) => {
+    res.render('new.ejs', {cakes:createdCakes})
+  })
+})
 
 app.get('/cakes/:id', (req, res) => {
-  // Cakes.findById(req.params.id, (error, foundCakes) => {
-    res.render('show.ejs'
-    // , {cakes:foundCakes}
-  )
-  // })
+  Cakes.findById(req.params.id, (error, foundCakes) => {
+    res.render('show.ejs', {cakes:foundCakes})
+  })
 })
 
 app.get('/', (req, res) => {
@@ -39,6 +35,25 @@ app.get('/cakes', (req, res) => {
     res.render('index.ejs', {cakes:allCakes})
   })
 })
+
+app.post('/cakes', (req, res) => {
+  Cakes.create(req.body, (error, createdCakes) => {
+    // console.log(createdCakes)
+    res.redirect('/cakes')
+  })
+})
+
+
+// Connect to Mongo
+mongoose.connect(process.env.DATABASE_URL, dbupdateobject);
+
+// Connection Error/Success
+db.on('error', (err) => console.log(err.message + ' is Mongod not running?'));
+db.on('connected', () => console.log('mongo connected: '));
+db.on('disconnected', () => console.log('mongo disconnected'));
+db.on('open', () => {
+    console.log('Connection made!');
+});
 
 
 app.listen(port, () => {
