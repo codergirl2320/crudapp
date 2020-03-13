@@ -14,6 +14,7 @@ const dbupdateobject = {
 
 app.use(express.urlencoded({extended:false}))
 app.use(methodOverride('_method'))
+app.use(express.static('public'))
 
 
 app.get('/cakes/new', (req, res) => {
@@ -27,10 +28,6 @@ app.get('/cakes/:id', (req, res) => {
     res.render('show.ejs', {cakes:foundCakes})
   })
 })
-
-// app.get('/', (req, res) => {
-//   res.send('your application is working...')
-// })
 
 app.get('/cakes/', (req, res) => {
   Cakes.find({}, (error, allCakes) => {
