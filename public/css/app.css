@@ -1,3 +1,26 @@
-/* body {
-  background-color: red;
-} */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.stripe {
+  fill: rgb(237,28,36);
+}
+
+.logo {
+  position: absolute;
+  top: 27px;
+  right: 5%;
+
+}
+
+.header {
+  height: 160px;
+  border: 5px solid black;
+  border-style: inset;
+}
+
+.blue-stripe {
+  height: 8px;
+  background-color: rgb(73,200,245)
+}

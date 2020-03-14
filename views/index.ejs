@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="/css/app.css">
-    <title>Eye Candy Theme Parties</title>
+    <%- include('./partials/head.ejs')%>
   </head>
   <body>
+    <header>
+    <%- include('./partials/header.ejs')%>
+    </header>
     <h1>Index Page</h1>
     <div class='container'>
       <%  for (let i = 0; i < cakes.length; i++) {%>
