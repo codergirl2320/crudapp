@@ -10,15 +10,13 @@
     <div class='container'>
       <%  for (let i = 0; i < cakes.length; i++) {%>
         <div class='cakes'>
-
           <a href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img[0]%>' style='max-width: 300px'></a>
-
           <%=cakes[i].name%>
-        <%}%>
-      </div>
+        </div>
+      <%}%>
     </div>
     <nav>
       <a href="/cakes/new">Create a New Treat</a>
-      </nav>
+    </nav>
   </body>
 </html>

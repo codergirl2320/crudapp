@@ -1,5 +1,6 @@
 const express = require('express')
 const app = express()
+// const morgan = require('morgan')
 const methodOverride = require('method-override')
 require('dotenv').config()
 const port = process.env.PORT || 3000
@@ -14,6 +15,7 @@ const dbupdateobject = {
 
 app.use(express.urlencoded({extended:false}))
 app.use(methodOverride('_method'))
+// app.use(morgan('tiny'))
 app.use(express.static('public'))
 
 const cakesController = require('./controllers/cakes_ctrl.js')

@@ -34,21 +34,26 @@ router.post('/', (req, res) => {
   })
 })
 
+// router.delete('/:id/removeimg', (req, res) => {
+//   Cakes.findByIdAndRemove(req.params.id, (err, data) => {
+//     res.redirect('/cakes')
+//   })
+// })
+
 router.delete('/:id', (req, res) => {
   Cakes.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/cakes')
   })
 })
 
-
 router.put('/:id/img', (req, res) => {
-  Cakes.findByIdAndUpdate(req.params.id, {$push: {img:[String]}}, (err, updatedModel) => {
+  req.body.img = req.body.img.split(',')
+  img = req.body.img
+  Cakes.findByIdAndUpdate(req.params.id, {$push: {img:img}}, (err, updatedModel) => {
     console.log(updatedModel)
-    res.redirect(`/cakes/${req.params.id}`)
+    res.redirect(`/cakes/${req.params.id}/edit`)
   })
 })
-
-
 
 router.put('/:id', (req, res) => {
   req.body.img = req.body.img.split(',')

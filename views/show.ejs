@@ -7,12 +7,9 @@
   <body>
     <h1><%=cakes.name%></h1>
       <div class='container'>
-
         <%for(img of cakes.img){%>
           <img style='max-width: 300px' src="<%=img%>"></img>
         <%}%>
-
-
         <ul>
           <li><%=cakes.description%></li>
           <li><%=cakes.price%></li>
@@ -22,7 +19,7 @@
       <nav>
         <a href="/cakes/<%=cakes._id%>/edit"><button>Edit</button></a>
         <form action="/cakes/<%=cakes._id%>?_method=DELETE" method="POST">
-        <input type="submit" value="delete" /><br/>
+          <input type="submit" value="delete" /><br/>
         </form>
       </nav>
       <a href='/cakes'>Back to Cakes Index</a>
