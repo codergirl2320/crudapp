@@ -11,8 +11,8 @@
       <%  for (let i = 0; i < cakes.length; i++) {%>
         <div class='cakes'>
 
-          <a href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img%>' alt='<%=cakes[i].name%>' style='max-width: 300px'></a>
-          
+          <a href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img[0]%>' style='max-width: 300px'></a>
+
           <%=cakes[i].name%>
         <%}%>
       </div>

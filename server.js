@@ -43,14 +43,6 @@ app.get('/cakes/:id/edit', (req, res) => {
 
 
 
-
-// app.post('/cakes/', (req, res) => {
-//   Cakes.create(req.body, (error, createdCakes) => {
-//     // console.log(createdCakes)
-//     res.redirect('/cakes')
-//   })
-// })
-
 app.post('/cakes/', (req, res) => {
   req.body.img = req.body.img.split(',')
   Cakes.create(req.body, (error, createdCakes) => {
@@ -60,15 +52,15 @@ app.post('/cakes/', (req, res) => {
 })
 
 
-
-
 app.delete('/cakes/:id', (req, res) => {
   Cakes.findByIdAndRemove(req.params.id, (err, data) => {
     res.redirect('/cakes')
   })
 })
 
+
 app.put('/cakes/:id', (req, res) => {
+  req.body.img = req.body.img.split(',')
   Cakes.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
     res.redirect(`/cakes/${req.params.id}`)
   })
