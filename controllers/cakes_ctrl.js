@@ -40,6 +40,16 @@ router.delete('/:id', (req, res) => {
   })
 })
 
+
+router.put('/:id/img', (req, res) => {
+  Cakes.findByIdAndUpdate(req.params.id, {$push: {img:[String]}}, (err, updatedModel) => {
+    console.log(updatedModel)
+    res.redirect(`/cakes/${req.params.id}`)
+  })
+})
+
+
+
 router.put('/:id', (req, res) => {
   req.body.img = req.body.img.split(',')
   Cakes.findByIdAndUpdate(req.params.id, req.body, {new:true}, (err, updatedModel) => {
