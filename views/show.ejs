@@ -22,7 +22,18 @@
       <ul>
         <li><%=cakes.description%></li>
         <li>$<%=cakes.price%></li>
-        <li>qty:<%=cakes.qty%></li>
+        <li>
+          <% if (cakes.qty > 0) { %>
+            Quantity in Stock: <%=cakes.qty%>
+          <% } else { %>
+            Out of Stock
+          <% } %>
+        </li>
+          <% if (cakes.qty > 0) { %>
+            <form action="/cakes/<%=cakes._id%>/qty?_method=PUT" method="POST">
+              <input class="order-button" type="submit" value="ORDER">
+            </form>
+          <% } %>
       </ul>
     </div>
     <div class="edit-delete">

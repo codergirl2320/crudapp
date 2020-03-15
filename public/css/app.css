@@ -67,7 +67,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 85px;
+  margin-bottom: 45px;
 }
 
 .new-form {
@@ -81,6 +81,7 @@ input {
   box-sizing: border-box;
   border: 1px solid black;
   margin: 5px;
+  outline: none;
 }
 
 
@@ -91,14 +92,14 @@ ul, li {
 }
 
 a {
-    font-family: 'Voltaire', sans-serif;
-    color: rgb(237,28,36);
+  font-family: 'Voltaire', sans-serif;
+  color: rgb(237,28,36);
 }
 
 p {
-    font-family: 'Voltaire', sans-serif;
-    text-align: center;
-    margin-bottom: 25px;
+  font-family: 'Voltaire', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
 
 }
 
@@ -146,7 +147,7 @@ button {
 }
 
 .images {
-  max-width: 300px;
+  max-width: 275px;
   margin: 5px 25px 0px 25px;
 }
 
@@ -213,4 +214,18 @@ h4 {
 
 .edit-form {
   align-content: center;
+}
+
+.order-button {
+  background-color: rgb(237,28,36);
+  height: 40px;
+  width: 100px;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 1.1vw;
+  border: 3px solid rgb(72,200,247);
+  border-radius: 4%;
+  margin: 5px;
+  outline: none;
+  padding: 0;
+  color: white;
 }

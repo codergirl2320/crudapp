@@ -26,6 +26,7 @@ router.get('/:id', (req, res) => {
 
 router.get('/', (req, res) => {
   Cakes.find({}, (error, allCakes) => {
+    // console.log(allCakes)
     res.render('index.ejs', {cakes:allCakes})
   })
 })
@@ -62,6 +63,12 @@ router.put('/:id/img', (req, res) => {
   Cakes.findByIdAndUpdate(req.params.id, {$push: {img:img}}, (err, updatedModel) => {
     console.log(updatedModel)
     res.redirect(`/cakes/${req.params.id}/edit`)
+  })
+})
+
+router.put('/:id/qty', (req, res) => {
+  Cakes.findByIdAndUpdate(req.params.id, {$inc: {qty:-1}}, (err, updatedModel) => {
+    res.redirect(`/cakes/${req.params.id}`)
   })
 })
 
