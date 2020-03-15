@@ -2,6 +2,14 @@ const express = require('express')
 const router = express.Router()
 const Cakes = require('../models/cakes.js')
 
+// const cakeSeed = require('../models/seed.js')
+//
+// Cakes.create(cakeSeed, (err, data) => {
+//     if (err) console.log (err.message)
+//       console.log( "added provided hotel data" )
+//     }
+// );
+
 router.get('/new', (req, res) => {
   Cakes.create(req.body, (error, createdCakes) => {
     res.render('new.ejs', {cakes:createdCakes})
