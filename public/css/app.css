@@ -57,12 +57,32 @@ h1 {
   text-align: center;
 }
 
+.form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.new-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 85px;
+}
+
+.new-form {
+  justify-content: center;
+  margin: 30px;
+}
+
 input {
   width: 520px;
   padding: 10px;
   box-sizing: border-box;
   border: 1px solid black;
+  margin: 5px;
 }
+
 
 ul, li {
   text-decoration: none;
