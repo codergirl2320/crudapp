@@ -1,6 +1,22 @@
 body {
+  height: 1400px;
   margin: 0;
   padding: 0;
+}
+
+input {
+  width: 300px;
+}
+
+.body-container {
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 25px;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 3vw;
 }
 
 .stripe {
@@ -9,18 +25,101 @@ body {
 
 .logo {
   position: absolute;
-  top: 27px;
+  top: 45px;
   right: 5%;
+}
 
+.ringmaster {
+  position: absolute;
+  top: 25px;
+  left: 5%;
+  border: 4px solid black;
+  border-radius: 50%;
 }
 
 .header {
-  height: 160px;
-  border: 5px solid black;
-  border-style: inset;
+  height: 200px;
+  border-top: 5px solid black;
+  border-bottom: 5px solid black;
 }
 
 .blue-stripe {
   height: 8px;
-  background-color: rgb(73,200,245)
+  background-color: rgb(72,200,247);
+}
+
+.blue-footer {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(72,200,247);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+
+}
+
+.info {
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Voltaire', sans-serif;
+}
+
+a {
+    font-family: 'Voltaire', sans-serif;
+    color: rgb(237,28,36);
+}
+
+p {
+    font-family: 'Voltaire', sans-serif;
+
+}
+
+button {
+  height: 50px;
+  width: 125px;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 1.5vw;
+  border: 3px solid black;
+  border-radius: 4%;
+  margin: 5px;
+}
+
+.button {
+  height: 50px;
+  width: 125px;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 1.5vw;
+  border: 3px solid black;
+  border-radius: 4%;
+  margin: 5px;
+}
+
+.edit-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.images {
+  max-width: 300px;
+  margin: 5px 25px;
+}
+
+.show-img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 25px;
 }

@@ -7,17 +7,22 @@
     <header>
     <%- include('./partials/header.ejs')%>
     </header>
-    <h1>Index Page</h1>
+    <main class="body-container">
+    <h1>Welcome to Eye Candy Theme Parties</h1>
     <div class='container'>
       <%  for (let i = 0; i < cakes.length; i++) {%>
         <div class='cakes'>
-          <a href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img[0]%>' style='max-width: 300px'></a>
-          <%=cakes[i].name%>
+          <a class="images" href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img[0]%>' style='max-width: 300px'></a>
+          <p><%=cakes[i].name%></p>
         </div>
       <%}%>
     </div>
     <nav>
-      <a href="/cakes/new">Create a New Treat</a>
+      <a href="/cakes/new">Add a New Treat</a>
     </nav>
+  </main>
+    <footer>
+    <%- include('./partials/footer.ejs')%>
+    </footer>
   </body>
 </html>

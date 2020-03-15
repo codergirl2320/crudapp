@@ -7,7 +7,8 @@
     <header>
     <%- include('./partials/header.ejs')%>
     </header>
-    <h1>New Page</h1>
+    <main class="body-container">
+    <h1>Add a New Treat</h1>
     <div class='container'>
       <form action="/cakes" method="POST">
         <input type="text" placeholder="name" name="name" /><br/>
@@ -18,6 +19,11 @@
         <input type="number" placeholder="qty" name="qty" /><br/>
         <input type="submit" value="Create Item">
       </form>
+      <a href='/cakes'>Back to Cakes Index</a><br/>
     </div>
+  </main>
+    <footer>
+    <%- include('./partials/footer.ejs')%>
+    </footer>
   </body>
 </html>
