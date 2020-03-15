@@ -10,6 +10,8 @@ const Cakes = require('../models/cakes.js')
 //     }
 // );
 
+// Cakes.collection.drop();
+
 router.get('/new', (req, res) => {
   Cakes.create(req.body, (error, createdCakes) => {
     res.render('new.ejs', {cakes:createdCakes})

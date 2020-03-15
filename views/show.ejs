@@ -9,11 +9,15 @@
     </header>
     <main class="body-container">
     <h1><%=cakes.name%></h1>
-      <div class='container'>
+      <div class='img-container'>
         <%for(img of cakes.img){%>
           <img class="images" src="<%=img%>"></img>
         <%}%>
       </div>
+      <div class="under-show-imgs">
+        <div class="show-index-link">
+          <a href='/cakes'>Back to Cakes Index</a>
+        </div>
       <div class="info">
       <ul>
         <li><%=cakes.description%></li>
@@ -24,10 +28,10 @@
     <div class="edit-delete">
         <a href="/cakes/<%=cakes._id%>/edit"><button>Edit Cake</button></a>
         <form action="/cakes/<%=cakes._id%>?_method=DELETE" method="POST">
-        <input class='button' type="submit" value="Delete Cake" /><br/>
+        <input id='show-delete-button' type="submit" value="Delete Cake" /><br/>
         </form>
     </div>
-      <a href='/cakes'>Back to Cakes Index</a>
+    </div>
     </main>
     <footer>
       <%- include('./partials/footer.ejs')%>
