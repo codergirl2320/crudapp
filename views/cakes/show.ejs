@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <%- include('./partials/head.ejs')%>
+    <%- include('../partials/head.ejs')%>
   </head>
   <body>
     <header>
-    <%- include('./partials/header.ejs')%>
+      <%- include('../partials/header.ejs')%>
     </header>
     <main class="body-container">
-    <h1><%=cakes.name%></h1>
+      <h1><%=cakes.name%></h1>
       <div class='img-container'>
         <%for(img of cakes.img){%>
           <img class="images" src="<%=img%>"></img>
@@ -18,34 +18,34 @@
         <div class="show-index-link">
           <a href='/cakes'>Back to Cakes Index</a>
         </div>
-      <div class="info">
-      <ul>
-        <li><%=cakes.description%></li>
-        <li>$<%=cakes.price%></li>
-        <li>
-          <% if (cakes.qty > 0) { %>
-            Quantity in Stock: <%=cakes.qty%>
-          <% } else { %>
-            Out of Stock
-          <% } %>
-        </li>
+      <div class="show-info">
+        <ul>
+          <li><%=cakes.description%></li>
+          <li>$<%=cakes.price%></li>
+          <li>
+            <% if (cakes.qty > 0) { %>
+              Quantity in Stock: <%=cakes.qty%>
+            <% } else { %>
+              Out of Stock
+            <% } %>
+          </li>
           <% if (cakes.qty > 0) { %>
             <form action="/cakes/<%=cakes._id%>/qty?_method=PUT" method="POST">
               <input class="order-button" type="submit" value="ORDER">
             </form>
           <% } %>
-      </ul>
-    </div>
-    <div class="edit-delete">
+        </ul>
+      </div>
+      <div class="edit-delete">
         <a href="/cakes/<%=cakes._id%>/edit"><button>Edit Cake</button></a>
         <form action="/cakes/<%=cakes._id%>?_method=DELETE" method="POST">
-        <input id='show-delete-button' type="submit" value="Delete Cake" /><br/>
+          <input id='show-delete-button' type="submit" value="Delete Cake" /><br/>
         </form>
-    </div>
-    </div>
+      </div>
+      </div>
     </main>
     <footer>
-      <%- include('./partials/footer.ejs')%>
+      <%- include('../partials/footer.ejs')%>
     </footer>
   </body>
 </html>

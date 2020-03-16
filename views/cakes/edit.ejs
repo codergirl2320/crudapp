@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs')%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header.ejs')%>
+    </header>
+    <main class="body-container">
+      <h1>Edit Page</h1>
+      <div class='container'>
+        <div class="edit-container">
+          <div class="edit-img-container">
+            <%for(let img of cakes.img){%>
+              <img style='max-width: 200px' src="<%=img%>"></img>
+            <%}%><br/>
+          </div>
+          <div class="edit-fields-container"
+            <form class="edit-form" action="/cakes/<%=cakes._id%>/img?_method=PUT" method="POST">
+              <h4>Add New Image:</h4>
+              <input class="field-text" type="text" placeholder="(comma separated)" name="img"/>
+              <input class="button" type="submit" value="Submit">
+            </form>
+            <form class="edit-form" action="/cakes/<%=cakes._id%>?_method=PUT" method="POST">
+              <h4>Name:</h4>
+              <input class="field-text" type="text" name="name" value="<%=cakes.name%>"/><br/>
+              <h4>Category:</h4>
+              <input class="field-text" type="text" name="category" value="<%=cakes.category%>"/><br/>
+              <h4>Edit Exiting Images:</h4>
+              <input class="field-text" type="text" name="img" value="<%=cakes.img%>"/><br/>
+              <h4>Description:</h4>
+              <input class="field-text" type="text" name="description" value="<%=cakes.description%>"/><br/>
+              <h4>Price:</h4>
+              <input class="field-text" type="number" name="price" value="<%=cakes.price%>"/><br/>
+              <h4>Quantity:</h4>
+              <input class="field-text" type="number" name="qty" value="<%=cakes.qty%>"/><br/>
+              <input class="button" type="submit" value="Submit"/>
+            </form>
+          </div>
+        </div>
+        <div class="edit-links">
+          <a href='/cakes'>Back to Cakes Index</a><br/>
+          <a href='/cakes/<%=cakes._id%>'>Back to Cakes Page</a>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <%- include('../partials/footer.ejs')%>
+    </footer>
+  </body>
+</html>

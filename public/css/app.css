@@ -30,6 +30,7 @@ body {
 .blue-stripe {
   height: 8px;
   background-color: rgb(72,200,247);
+
 }
 
 .body-container {
@@ -37,11 +38,40 @@ body {
   margin: 0 auto;
 }
 
+.logout-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: 15px;
+  outline: none;
+}
+
+.home-message {
+  text-align: center;
+  font-size: 4vw;
+}
+
+.welcome {
+  margin: 3px 0 30px 0;
+  padding: 0;
+}
+
 h1 {
-  padding-top: 25px;
+  margin-top: 60px;
   margin-bottom: 30px;
   font-family: 'Voltaire', sans-serif;
   font-size: 3vw;
+}
+
+.logout-button {
+  border: none;
+  font-family: 'Voltaire', sans-serif;
+  color: rgb(237,28,36);
+  font-size: 1.5vw;
+  text-align: right;
+  width: 70px;
+  text-decoration: none;
 }
 
 .img-container {
@@ -49,46 +79,17 @@ h1 {
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-
 }
 
-.info {
-  margin: 0 auto;
-  text-align: center;
+.images {
+  max-width: 275px;
+  margin: 5px 25px 0px 25px;
 }
 
-.form-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-.new-form-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  margin-bottom: 45px;
-}
-
-.new-form {
-  justify-content: center;
-  margin: 30px;
-}
-
-input {
-  width: 520px;
-  padding: 10px;
-  box-sizing: border-box;
-  border: 1px solid black;
-  margin: 5px;
-  outline: none;
-}
-
-
-ul, li {
-  text-decoration: none;
-  list-style: none;
+p {
   font-family: 'Voltaire', sans-serif;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
 a {
@@ -96,11 +97,38 @@ a {
   color: rgb(237,28,36);
 }
 
-p {
-  font-family: 'Voltaire', sans-serif;
-  text-align: center;
-  margin-bottom: 25px;
+.under-show-imgs {
+  display: flex;
+  flex-direction: row;
+}
 
+.show-index-link {
+  margin-top: 50px;
+}
+
+.show-info {
+  margin: 0 auto;
+  text-align: center;
+}
+
+ul, li {
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Voltaire', sans-serif;
+}
+
+.order-button {
+  background-color: rgb(237,28,36);
+  height: 40px;
+  width: 100px;
+  font-family: 'Voltaire', sans-serif;
+  font-size: 1.1vw;
+  border: 3px solid rgb(72,200,247);
+  border-radius: 4%;
+  margin: 5px;
+  outline: none;
+  padding: 0;
+  color: white;
 }
 
 button {
@@ -125,6 +153,15 @@ button {
   outline: none;
 }
 
+.edit-delete {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-right: 15px;
+  margin-top: 20px;
+  outline: none;
+}
+
 #show-delete-button {
   height: 50px;
   width: 125px;
@@ -137,18 +174,10 @@ button {
   text-align: center;
 }
 
-.edit-delete {
+.edit-container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
-  margin-right: 15px;
-  margin-top: 20px;
-  outline: none;
-}
-
-.images {
-  max-width: 275px;
-  margin: 5px 25px 0px 25px;
+  align-items: center;
 }
 
 .edit-img-container {
@@ -158,45 +187,6 @@ button {
   flex-wrap: wrap;
   justify-content: center;
   margin: 0 auto;
-
-}
-
-footer {
-  margin-top: 65px;
-}
-
-.blue-footer {
-  position: fixed;
-  height: 50px;
-  width: 100%;
-  bottom: 0;
-  background-color: rgb(72,200,247);
-}
-
-.under-show-imgs {
-  display: flex;
-  flex-direction: row;
-
-}
-
-.show-index-link {
-  margin-top: 50px;
-}
-
-.edit-container {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-}
-
-.edit-links {
-  margin-top: 75px;
-  padding-bottom: 25px;
-}
-
-.field-text {
-  font-family: 'Voltaire', sans-serif;
-  font-size: 1vw;
 }
 
 .edit-fields-container {
@@ -206,26 +196,56 @@ footer {
   margin: 0 auto;
 }
 
+.edit-form {
+  align-content: center;
+}
+
 h4 {
   font-family: 'Voltaire', sans-serif;
   margin: 10px 0 5px 0;
   padding: 0;
 }
 
-.edit-form {
-  align-content: center;
-}
-
-.order-button {
-  background-color: rgb(237,28,36);
-  height: 40px;
-  width: 100px;
-  font-family: 'Voltaire', sans-serif;
-  font-size: 1.1vw;
-  border: 3px solid rgb(72,200,247);
-  border-radius: 4%;
+input {
+  width: 520px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid black;
   margin: 5px;
   outline: none;
-  padding: 0;
-  color: white;
+}
+
+.field-text {
+  font-family: 'Voltaire', sans-serif;
+  font-size: 1vw;
+}
+
+.edit-links {
+  margin-top: 75px;
+  padding-bottom: 25px;
+}
+
+.new-form-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 45px;
+}
+
+.new-form {
+  justify-content: center;
+  margin: 30px;
+}
+
+footer {
+  margin-top: 65px;
+  width: 100%;
+}
+
+.blue-footer {
+  position: fixed;
+  height: 50px;
+  width: 100%;
+  bottom: 0;
+  background-color: rgb(72,200,247);
 }

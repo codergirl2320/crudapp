@@ -6,6 +6,8 @@ require('dotenv').config()
 const port = process.env.PORT || 3000
 // const Cakes = require('./models/cakes.js')
 const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs')
+const session = require('express-session')
 const db = mongoose.connection;
 const dbupdateobject = {
     useNewUrlParser: true,
@@ -14,12 +16,23 @@ const dbupdateobject = {
 };
 
 app.use(express.urlencoded({extended:false}))
+app.use(session({secret:'feedmeseymour', resave:false, saveUninitialized:false}))
 app.use(methodOverride('_method'))
 // app.use(morgan('tiny'))
 app.use(express.static('public'))
 
 const cakesController = require('./controllers/cakes_ctrl.js')
 app.use('/cakes', cakesController)
+
+const usersController = require('./controllers/users.js')
+app.use('/users', usersController)
+
+const sessionController = require('./controllers/session.js')
+app.use('/session', sessionController)
+
+app.get('/', (req, res) => {
+  res.render('home.ejs')
+})
 
 // Connect to Mongo
 mongoose.connect(process.env.DATABASE_URL, dbupdateobject);

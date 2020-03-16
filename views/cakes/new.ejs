@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs')%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header.ejs')%>
+    </header>
+    <main class="body-container">
+      <h1>Add a New Cake</h1>
+      <div class='new-form-container'>
+        <form class="new-form" action="/cakes" method="POST">
+          <input class="field-text" type="text" placeholder="Name" name="name" /><br/>
+          <input class="field-text" type="text" placeholder="Category" name="category" /><br/>
+          <input class="field-text" type="text" placeholder="Images (comma separated)" name="img" /><br/>
+          <input class="field-text" type="text" placeholder="Description" name="description" /><br/>
+          <input class="field-text" type="number" placeholder="Price" name="price" /><br/>
+          <input class="field-text" type="number" placeholder="Qty" name="qty" /><br/>
+          <input class="button" type="submit" value="Create Item">
+        </form>
+      </div>
+      <a href='/cakes'>Back to Cakes Index</a><br/>
+    </main>
+    <footer>
+      <%- include('../partials/footer.ejs')%>
+    </footer>
+  </body>
+</html>

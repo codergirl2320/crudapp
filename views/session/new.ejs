@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs')%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header.ejs')%>
+    </header>
+    <main class="body-container">
+    <h1>Log In</h1>
+    <form action="/session" method="POST">
+      <input class="field-text" type="text" placeholder="Username" name="username" /><br/>
+      <input class="field-text" type="password" placeholder="Password" name="password" /><br/>
+      <input class="button" type="submit" value="Log In">
+    </form>
+  </main>
+  <footer>
+    <%- include('../partials/footer.ejs')%>
+  </footer>
+  </body>
+</html>

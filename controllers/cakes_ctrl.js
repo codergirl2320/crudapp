@@ -14,26 +14,30 @@ const Cakes = require('../models/cakes.js')
 
 router.get('/new', (req, res) => {
   Cakes.create(req.body, (error, createdCakes) => {
-    res.render('new.ejs', {cakes:createdCakes})
+    res.render('cakes/new.ejs', {cakes:createdCakes})
   })
 })
 
 router.get('/:id', (req, res) => {
   Cakes.findById(req.params.id, (error, foundCakes) => {
-    res.render('show.ejs', {cakes:foundCakes})
+    res.render('cakes/show.ejs', {cakes:foundCakes})
   })
 })
 
 router.get('/', (req, res) => {
-  Cakes.find({}, (error, allCakes) => {
-    // console.log(allCakes)
-    res.render('index.ejs', {cakes:allCakes})
-  })
+  if(req.session.user){
+    Cakes.find({}, (error, allCakes) => {
+      // console.log(allCakes)
+      res.render('cakes/index.ejs', {cakes:allCakes, user:req.session.user})
+    })
+  } else {
+    res.redirect('/')
+  }
 })
 
 router.get('/:id/edit', (req, res) => {
   Cakes.findById(req.params.id, (error, foundCakes) => {
-    res.render('edit.ejs', {cakes:foundCakes})
+    res.render('cakes/edit.ejs', {cakes:foundCakes})
   })
 })
 

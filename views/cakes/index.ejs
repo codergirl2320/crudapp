@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <%- include('../partials/head.ejs')%>
+  </head>
+  <body>
+    <header>
+      <%- include('../partials/header.ejs')%>
+    </header>
+    <main class="body-container">
+      <div class="logout-container">
+      <form action="/session?_method=DELETE" method="POST">
+        <input class="logout-button" type="submit" value="Log Out">
+      </form>
+    </div>
+      <h1 class="welcome">Welcome to Eye Candy Theme Parties, <%=user.username%>!</h1>
+      <div class='img-container'>
+        <%  for (let i = 0; i < cakes.length; i++) {%>
+          <div>
+            <a class="images" href='/cakes/<%=cakes[i].id%>'><img src='<%=cakes[i].img[0]%>' style='max-width: 300px'></a>
+            <p><%=cakes[i].name%></p>
+          </div>
+        <%}%>
+      </div>
+      <nav>
+        <a href="/cakes/new">Add a New Cake</a>
+      </nav>
+    </main>
+    <footer>
+      <%- include('../partials/footer.ejs')%>
+    </footer>
+  </body>
+</html>
