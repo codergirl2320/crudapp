@@ -9,14 +9,16 @@
     </header>
     <main class="body-container">
       <h1><%=cakes.name%></h1>
+      <div class="small-screens">
       <div class='img-container'>
         <%for(img of cakes.img){%>
           <img class="images" src="<%=img%>"></img>
         <%}%>
       </div>
+    </div>
       <div class="under-show-imgs">
         <div class="show-index-link">
-          <a href='/cakes'>Back to Cakes Index</a>
+          <a href='/cakes'>Back to Cakes Page</a>
         </div>
       <div class="show-info">
         <ul>
@@ -37,9 +39,9 @@
         </ul>
       </div>
       <div class="edit-delete">
-        <a href="/cakes/<%=cakes._id%>/edit"><button>Edit Cake</button></a>
+        <a class="edit-button" href="/cakes/<%=cakes._id%>/edit">Edit</a>
         <form action="/cakes/<%=cakes._id%>?_method=DELETE" method="POST">
-          <input id='show-delete-button' type="submit" value="Delete Cake" /><br/>
+          <input class="delete-button" type="submit" value="Delete" /><br/>
         </form>
       </div>
       </div>

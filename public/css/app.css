@@ -1,3 +1,8 @@
+:root {
+  --red: rgb(237,28,36);
+  --turquoise: rgb(72,200,247);
+}
+
 
 body {
   margin: 0;
@@ -11,7 +16,7 @@ body {
 }
 
 .stripe {
-  fill: rgb(237,28,36);
+  fill: var(--red);
 }
 
 .ringmaster {
@@ -30,7 +35,7 @@ body {
 
 .blue-stripe {
   height: 8px;
-  background-color: rgb(72,200,247);
+  background-color: var(--turquoise);
 
 }
 
@@ -48,6 +53,12 @@ body {
   outline: none;
 }
 
+h3 {
+  color: var(--red);
+  font-family: 'Voltaire';
+  text-align: center;
+}
+
 .home-p {
   text-align: center;
   font-size: 2.5vw;
@@ -58,34 +69,42 @@ body {
   text-align: center;
   font-family: 'Voltaire';
   font-size: 4.5vw;
-  color: rgb(237,28,36);
+  color: var(--red);
 }
 
 span {
-  color: rgb(72,200,247);
+  color: var(--turquoise);
   font-size: 3.5vw;
 }
 
 .welcome {
-  margin: 3px 0 30px 0;
+  margin: 3px 0 30px 20px;
   padding: 0;
 }
 
 h1 {
   margin-top: 60px;
   margin-bottom: 30px;
+  margin-left: 15px;
   font-family: 'Voltaire', sans-serif;
   font-size: 3vw;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .logout-button {
   border: none;
   font-family: 'Voltaire', sans-serif;
-  color: rgb(237,28,36);
+  color: var(--red);
   font-size: 1.5vw;
   text-align: right;
-  width: 70px;
+  width: 80px;
   text-decoration: none;
+  padding: 0;
 }
 
 .img-container {
@@ -96,7 +115,7 @@ h1 {
 }
 
 .images {
-  max-width: 275px;
+  max-width: 235px;
   margin: 5px 25px 0px 25px;
 }
 
@@ -104,24 +123,57 @@ p {
   font-family: 'Voltaire', sans-serif;
   text-align: center;
   margin-bottom: 25px;
+  font-size: 1.2vw;
 }
 
 a {
   font-family: 'Voltaire', sans-serif;
-  color: rgb(237,28,36);
+  color: var(--red);
 }
+
+.index-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.new-cake-link {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  font-family: 'Voltaire', sans-serif;
+  color: var(--red);
+  font-size: 1.5vw;
+  width: 150px;
+  text-decoration: none;
+}
+
 
 .under-show-imgs {
   display: flex;
   flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 15px;
 }
 
 .show-index-link {
   margin-top: 50px;
+  margin-bottom: 15px;
+  margin-left: 15px;
+  font-size: 1.4vw;
+}
+
+.show-link {
+  margin-top: 50px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+  font-size: 1.4vw;
 }
 
 .show-info {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   text-align: center;
 }
 
@@ -129,17 +181,19 @@ ul, li {
   text-decoration: none;
   list-style: none;
   font-family: 'Voltaire', sans-serif;
+  padding: 2px;
+  font-size: 1.2vw;
 }
 
 .order-button {
-  background-color: rgb(237,28,36);
+  background-color: var(--red);
   height: 40px;
   width: 100px;
   font-family: 'Voltaire', sans-serif;
   font-size: 1.1vw;
-  border: 3px solid rgb(72,200,247);
+  border: 3px solid var(--turquoise);
   border-radius: 4%;
-  margin: 5px;
+  margin: 10px;
   outline: none;
   padding: 0;
   color: white;
@@ -171,9 +225,33 @@ button {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  margin-right: 15px;
+  margin-right: 5px;
   margin-top: 20px;
   outline: none;
+}
+
+.edit-button {
+  text-align: right;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  font-family: 'Voltaire', sans-serif;
+  color: var(--red);
+  font-size: 1.5vw;
+  width: 40px;
+  text-decoration: none;
+}
+
+.delete-button {
+  text-align: center;
+  padding: 5px;
+  margin: 5px;
+  border: none;
+  font-family: 'Voltaire', sans-serif;
+  color: var(--red);
+  font-size: 1.5vw;
+  width: 80px;
+  text-decoration: none;
 }
 
 #show-delete-button {
@@ -237,18 +315,27 @@ input {
 .edit-links {
   margin-top: 75px;
   padding-bottom: 25px;
+
+  margin-bottom: 5px;
+  margin-left: 15px;
 }
 
 .new-form-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-bottom: 45px;
 }
 
 .new-form {
   justify-content: center;
   margin: 30px;
+}
+
+.new-index-link {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 15px;
+  font-size: 1.4vw;
 }
 
 footer {
@@ -261,5 +348,27 @@ footer {
   height: 50px;
   width: 100%;
   bottom: 0;
-  background-color: rgb(72,200,247);
+  background-color: var(--turquoise);
+}
+
+
+
+@media (max-width: 1180px) {
+
+.img-container {
+  width: 800px;
+
+}
+
+.small-screens {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.images {
+  max-width: 350px;
+  margin: 5px 25px 0px 25px;
+}
+
 }
