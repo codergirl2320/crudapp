@@ -1,3 +1,4 @@
+
 body {
   margin: 0;
   padding: 0;
@@ -47,9 +48,22 @@ body {
   outline: none;
 }
 
+.home-p {
+  text-align: center;
+  font-size: 2.5vw;
+  margin-top: 90px;
+}
+
 .home-message {
   text-align: center;
-  font-size: 4vw;
+  font-family: 'Voltaire';
+  font-size: 4.5vw;
+  color: rgb(237,28,36);
+}
+
+span {
+  color: rgb(72,200,247);
+  font-size: 3.5vw;
 }
 
 .welcome {
