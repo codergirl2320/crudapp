@@ -2,6 +2,7 @@ const express = require('express')
 const router = express.Router()
 const Cakes = require('../models/cakes.js')
 
+
 // const cakeSeed = require('../models/seed.js')
 //
 // Cakes.create(cakeSeed, (err, data) => {
@@ -11,6 +12,7 @@ const Cakes = require('../models/cakes.js')
 // );
 
 // Cakes.collection.drop();
+
 
 router.get('/new', (req, res) => {
   Cakes.create(req.body, (error, createdCakes) => {
@@ -48,12 +50,6 @@ router.post('/', (req, res) => {
     res.redirect('/cakes')
   })
 })
-
-// router.delete('/:id/removeimg', (req, res) => {
-//   Cakes.findByIdAndRemove(req.params.id, (err, data) => {
-//     res.redirect('/cakes')
-//   })
-// })
 
 router.delete('/:id', (req, res) => {
   Cakes.findByIdAndRemove(req.params.id, (err, data) => {

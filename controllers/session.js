@@ -3,6 +3,7 @@ const router = express.Router()
 const bcrypt = require('bcryptjs')
 const User = require('../models/users.js')
 
+
 router.get('/new/err', (req, res) => {
   res.render('session/err.ejs')
 })

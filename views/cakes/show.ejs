@@ -10,12 +10,12 @@
     <main class="body-container">
       <h1><%=cakes.name%></h1>
       <div class="small-screens">
-      <div class='img-container'>
-        <%for(img of cakes.img){%>
-          <img class="images" src="<%=img%>"></img>
-        <%}%>
+        <div class='img-container'>
+          <%for(img of cakes.img){%>
+            <img class="images" src="<%=img%>"></img>
+          <%}%>
+        </div>
       </div>
-    </div>
       <div class="under-show-imgs">
         <div class="show-index-link">
           <a href='/cakes'>Back to Cakes Page</a>
@@ -33,7 +33,7 @@
           </li>
           <% if (cakes.qty > 0) { %>
             <form action="/cakes/<%=cakes._id%>/qty?_method=PUT" method="POST">
-              <input class="order-button" type="submit" value="ORDER">
+              <input class="button" type="submit" value="ORDER">
             </form>
           <% } %>
         </ul>

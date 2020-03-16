@@ -16,11 +16,11 @@
               <img style='max-width: 200px' src="<%=img%>"></img>
             <%}%><br/>
           </div>
-          <div class="edit-fields-container"
+          <div class="edit-fields-container">
             <form class="edit-form" action="/cakes/<%=cakes._id%>/img?_method=PUT" method="POST">
               <h4>Add New Image:</h4>
-              <input class="field-text" type="text" placeholder="(comma separated)" name="img"/>
-              <input class="button" type="submit" value="Submit">
+              <input class="field-text" type="text" placeholder="(comma separated)" name="img"/><br/>
+              <input class="button" type="submit" value="Submit"/>
             </form>
             <form class="edit-form" action="/cakes/<%=cakes._id%>?_method=PUT" method="POST">
               <h4>Name:</h4>

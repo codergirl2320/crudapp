@@ -4,7 +4,6 @@ const app = express()
 const methodOverride = require('method-override')
 require('dotenv').config()
 const port = process.env.PORT || 3000
-// const Cakes = require('./models/cakes.js')
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs')
 const session = require('express-session')
@@ -15,11 +14,13 @@ const dbupdateobject = {
     useFindAndModify: false
 };
 
+
 app.use(express.urlencoded({extended:false}))
 app.use(session({secret:'feedmeseymour', resave:false, saveUninitialized:false}))
 app.use(methodOverride('_method'))
 // app.use(morgan('tiny'))
 app.use(express.static('public'))
+
 
 const cakesController = require('./controllers/cakes_ctrl.js')
 app.use('/cakes', cakesController)
@@ -30,9 +31,11 @@ app.use('/users', usersController)
 const sessionController = require('./controllers/session.js')
 app.use('/session', sessionController)
 
+
 app.get('/', (req, res) => {
   res.render('home.ejs')
 })
+
 
 // Connect to Mongo
 mongoose.connect(process.env.DATABASE_URL, dbupdateobject);
