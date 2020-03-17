@@ -1,20 +1,26 @@
 # crudapp
 
-Tania Dodson (github.com/codergirl2320/crudapp)
-crud-app
-To access my app, please click the following link: https://floating-badlands-60887.herokuapp.com/
+#Tania Dodson (github.com/codergirl2320/crudapp)
 
-Technologies used:
-HTML
-CSS
-EJS
-Express
-Mongoose
-Bcrypt
-Method-Override
-EJS Partials
+##crud-app
 
-<!-- //APP EXPLANATION: -->
+
+##To access my app, please click the following link: https://floating-badlands-60887.herokuapp.com/
+
+
+##TECHNOLOGIES USED:
+
+-HTML
+-CSS
+-EJS
+-Express
+-Mongoose
+-Bcrypt
+-Method-Override
+-EJS Partials
+
+
+##APP EXPLANATION:
 
 Cake decorating is one of my MANY hobbies and I tried to make a business out of it a few years back. I have a FB page and business cards - but I never had a website. So I was really excited to do that for this project. Because this site doesn’t have all of it’s layers yet - I want to explain the concept behind it. In my business, I was creating the stationary, decorations as well as cakes and other treats. So when I was brainstorming for a name, I was thinking about how I’m offering these three different things that all work together - kind of like a three-ring circus…and nothing is MORE like a three-ring circus than a kid’s birthday party - and if you’re selling theme parties - it makes sense for your business to have a theme - and the circus theme made me the ringmaster - so it was perfect! And “Eye Candy” was just because that’s a phrase I use a lot personally when I get obsessed with something and get joy out of looking at it.
 
@@ -42,7 +48,8 @@ And I added the FB logo which links to my FB page. AND it opens it in a new wind
 
 Show code…
 
-<!-- //ISSUES: -->
+
+##ISSUES:
 
 So - issues:
 
@@ -58,7 +65,8 @@ HOWEVER, at that point I realized that if I wanted to add a new image and I just
 
 So I thought - when I add an image - I need it to push that image into the array. Which I can’t do in THAT field, so I need a new field for adding images on the edit.ejs page (lines 20-24)…which will need its own put route that separates at the commas and redirects back to the edit page. Learned about “$push” (line 60-66)
 
-<!-- //CODE: -->
+
+##CODE:
 
 Code stuff:
 
@@ -75,7 +83,7 @@ EJS partials
 didn’t use a framework because I knew what I wanted to do and agreed with Matt that a framework would probably cause more issues than it solved
 
 
-<!-- //THINGS TO ADD: -->
+##THINGS TO ADD:
 
 I want to add:
 
@@ -87,6 +95,8 @@ photo galleries of events
 
 review page with timestamps
 
+
+##WIREFRAMES
 
 ![alt text](IMG_3204.PNG)
 
