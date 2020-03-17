@@ -12,6 +12,7 @@
 
 - HTML
 - CSS
+- Node.js
 - EJS
 - Express
 - Mongoose
