@@ -1,5 +1,7 @@
 # crudapp
 
+Link: https://floating-badlands-60887.herokuapp.com/
+
 <!-- //APP EXPLANATION: -->
 
 Cake decorating is one of my MANY hobbies and I tried to make a business out of it a few years back. I have a FB page and business cards - but I never had a website. So I was really excited to do that for this project. Because this site doesn’t have all of it’s layers yet - I want to explain the concept behind it. In my business, I was creating the stationary, decorations as well as cakes and other treats. So when I was brainstorming for a name, I was thinking about how I’m offering these three different things that all work together - kind of like a three-ring circus…and nothing is MORE like a three-ring circus than a kid’s birthday party - and if you’re selling theme parties - it makes sense for your business to have a theme - and the circus theme made me the ringmaster - so it was perfect! And “Eye Candy” was just because that’s a phrase I use a lot personally when I get obsessed with something and get joy out of looking at it.
