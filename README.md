@@ -1,6 +1,18 @@
 # crudapp
 
-Link: https://floating-badlands-60887.herokuapp.com/
+Tania Dodson (github.com/codergirl2320/crudapp)
+crud-app
+To access my app, please click the following link: https://floating-badlands-60887.herokuapp.com/
+
+Technologies used:
+HTML
+CSS
+EJS
+Express
+Mongoose
+Bcrypt
+Method-Override
+EJS Partials
 
 <!-- //APP EXPLANATION: -->
 
