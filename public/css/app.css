@@ -150,6 +150,33 @@ h3 {
   justify-content: space-around;
 }
 
+.show-img-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  justify-content: space-around;
+  /* height: 400px; */
+}
+
+.show-img-container > .show-images {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+/* border: 5px solid red; */
+width: 400px;
+}
+
+.show-img-container > .show-images ~ .show-images {
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; */
+/* border: none; */
+width: 17%;
+}
+
 .images {
   max-width: 235px;
   margin: 5px 25px 0px 25px;
