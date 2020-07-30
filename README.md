@@ -1,7 +1,7 @@
 # crudapp
 
 # Tania Dodson (github.com/codergirl2320/crudapp)
-![EyeCandy](https://i.imgur.com/VMN5Hhb.png)
+![EyeCandy](https://i.imgur.com/KAtiN3E.png)
 
 ## crud-app
 
